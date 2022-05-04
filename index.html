@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A redesign of an H&M product page.">
+    <title>H&M | Product Page</title>
+
+    <!-- link to favicon -->
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+
+    <!-- link to css and normalize -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+
+    <!-- add our icons -->
+    <link rel="stylesheet" href="./fontawesome/css/all.css">
+
+    <!-- link to custom fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- link to JS file -->
+    <script src="js/form.js" defer></script>
+
+</head>
+
+<!-- image credits -->
+<!-- model photo 1: https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F4b%2Fcf%2F4bcfec9ae5cb3d271830adb0a1f677c78592acea.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main] -->
+<!-- model photo 2: https://lp2.hm.com/hmgoepprod?set=format%5Bwebp%5D%2Cquality%5B79%5D%2Csource%5B%2F18%2F46%2F1846aa4e56a1caec61736faae14204fba6b3558a.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url%5Bfile%3A%2Fproduct%2Fmain%5D -->
+<!-- pink hoodie image: https://lp2.hm.com/hmgoepprod?set=format%5Bwebp%5D%2Cquality%5B79%5D%2Csource%5B%2Fc0%2F42%2Fc042f3c326869c56c20aa336b4a24ff7a5d4faed.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url%5Bfile%3A%2Fproduct%2Fminiature%5D -->
+<!-- black hoodie image:  https://lp2.hm.com/hmgoepprod?set=format%5Bwebp%5D%2Cquality%5B79%5D%2Csource%5B%2F4c%2Fe5%2F4ce59a2de56279b809d3c72da58dcc60162bda05.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url%5Bfile%3A%2Fproduct%2Fminiature%5D-->
+<!-- white hoodie image: https://lp2.hm.com/hmgoepprod?set=format%5Bwebp%5D%2Cquality%5B79%5D%2Csource%5B%2Fe9%2F4d%2Fe94de19de5fb6f6a36b1f58ad7513b04c6b6e7fd.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url%5Bfile%3A%2Fproduct%2Fminiature%5D -->
+<!-- blue hoodie image: https://lp2.hm.com/hmgoepprod?set=format%5Bwebp%5D%2Cquality%5B79%5D%2Csource%5B%2F8f%2F92%2F8f92734334ee04dddc889cc5c27b37451ee06b96.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url%5Bfile%3A%2Fproduct%2Fminiature%5D -->
+<!-- shoes image: https://lp2.hm.com/hmgoepprod?set=source[/1f/50/1f50fbb1997ed1ec976ce86d267e901fa2b7bbb5.jpg],origin[dam],category[],type[DESCRIPTIVESTILLLIFE],res[s],hmver[1]&call=url[file:/product/main] -->
+<!-- jeans image: https://lp2.hm.com/hmgoepprod?set=source[/76/e2/76e23bc5c3d3110fd5050a8536728e87b517b01d.jpg],origin[dam],category[men_jeans_skinny],type[DESCRIPTIVESTILLLIFE],res[s],hmver[2]&call=url[file:/product/main] -->
+<!-- jeans image 2: https://lp2.hm.com/hmgoepprod?set=source[/01/0a/010ab4b2d57b35055c5f9ba287cbbeb6b5c7343f.jpg],origin[dam],category[],type[DESCRIPTIVESTILLLIFE],res[s],hmver[2]&call=url[file:/product/main] -->
+<!-- bag image: https://lp2.hm.com/hmgoepprod?set=source[/b8/eb/b8eb88ae30689342ec0d735583d2a3568aaabb9b.jpg],origin[dam],category[],type[DESCRIPTIVESTILLLIFE],res[s],hmver[2]&call=url[file:/product/main] -->
+<!-- logo image: https://logos-world.net/hm-logo/ -->
+
+<body>
+    <!-- header contains the top nav and main nav/logo -->
+    <header>
+        <div class="top-header-container">
+            <div>
+                <ul>
+                    <li><a href="#" title="Customer Service/FAQ">Customer Service</a></li>
+                    <li><a href="#" title="Sign-up Now">Newsletter Sign-up</a></li>
+                    <li><a href="#" title="Student Offer, Sign-up Now">Students Get 10% Off</a></li>
+                    <li>
+                        <label for="show"><i class="fa-solid fa-ellipsis"></i></label>
+                        <input type="checkbox" id="show" name="show" />
+                        <ul class="top-header-dropdown">
+                            <li><a href="#">Find Store</a></li>
+                            <li><a href="#">Download Android App</a></li>
+                            <li><a href="#">Download IOS App</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
+                    <li><a href="#" title="Sign-up Now">Sign-up</a></li>
+
+                    <li><a href="#"><i class="fa-solid fa-heart"></i></a></li>
+                    <li><a href="#" title="View Your Favourites">Favourites</a></li>
+
+                    <li><a href="#"><i class="fa-solid fa-bag-shopping"></i></a></li>
+                    <li><a href="#" title="View your Shopping Bag">Shopping Bag(0)</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="logo-container">
+            <a href="index.html" title="H&M Home"><img src="./img/logo.png" alt="H&M Logo" /></a>
+        </div>
+        <div class="mobile-menu">
+            <input id="burger" type="checkbox" />
+            <label for="burger">&#9776;</label>
+            <!-- div that contains the links. Set to display: none and then becomes visible under the label when the box is checked -->
+            <div>
+                <a href="#">Women</a>
+                <a href="#">Divided</a>
+                <a href="#">Men</a>
+                <a href="#">Baby</a>
+                <a href="#">Kids</a>
+                <a href="#">H&M HOME</a>
+                <a href="#">Sale</a>
+                <a href="#">Sustainability</a>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">Women</a>
+                    <div class="main-header-dropdown">
+                        <div>
+                            <h5>Trending</h5>
+                            <ul>
+                                <li><a href="#">Spring Clothes</a></li>
+                                <li><a href="#">Y2K Fashion</a></li>
+                                <li><a href="#">Comfy Fashion</a></li>
+                                <li><a href="#">Bright Colours</a></li>
+                                <li><a href="#">Festival Clothing</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5>Shop By Product</h5>
+                            <ul>
+                                <li><a href="#">T-Shirts</a></li>
+                                <li><a href="#">Pants</a></li>
+                                <li><a href="#">Long Sleeves</a></li>
+                                <li><a href="#">Dresses</a></li>
+                                <li><a href="#">Jeans</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5>Gifting</h5>
+                            <ul>
+                                <li><a href="#">Gift Card</a></li>
+                                <li><a href="#">Gifting Process</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">Divided</a>
+                    <div class="main-header-dropdown">
+                        <div>
+                            <h5>Trending</h5>
+                            <ul>
+                                <li><a href="#">Spring Clothes</a></li>
+                                <li><a href="#">Y2K Fashion</a></li>
+                                <li><a href="#">Comfy Fashion</a></li>
+                                <li><a href="#">Bright Colours</a></li>
+                                <li><a href="#">Festival Clothing</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5>Shop By Product</h5>
+                            <ul>
+                                <li><a href="#">T-Shirts</a></li>
+                                <li><a href="#">Pants</a></li>
+                                <li><a href="#">Long Sleeves</a></li>
+                                <li><a href="#">Tops</a></li>
+                                <li><a href="#">Jeans</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5>Gifting</h5>
+                            <ul>
+                                <li><a href="#">Gift Card</a></li>
+                                <li><a href="#">Gifting Process</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">Men</a>
+                    <div class="main-header-dropdown">
+                        <div>
+                            <h5>Trending</h5>
+                            <ul>
+                                <li><a href="#">Spring Clothes</a></li>
+                                <li><a href="#">Y2K Fashion</a></li>
+                                <li><a href="#">Comfy Fashion</a></li>
+                                <li><a href="#">Bright Colours</a></li>
+                                <li><a href="#">Festival Clothing</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5>Shop By Product</h5>
+                            <ul>
+                                <li><a href="#">T-Shirts</a></li>
+                                <li><a href="#">Pants</a></li>
+                                <li><a href="#">Long Sleeves</a></li>
+                                <li><a href="#">Jackets</a></li>
+                                <li><a href="#">Jeans</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5>Gifting</h5>
+                            <ul>
+                                <li><a href="#">Gift Card</a></li>
+                                <li><a href="#">Gifting Process</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">Baby</a>
+                    <div class="main-header-dropdown">
+                        <div>
+                            <h5>Shop By Product</h5>
+                            <ul>
+                                <li><a href="#">T-Shirts</a></li>
+                                <li><a href="#">Pants</a></li>
+                                <li><a href="#">Long Sleeves</a></li>
+                                <li><a href="#">Jackets</a></li>
+                                <li><a href="#">Jeans</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5>Gifting</h5>
+                            <ul>
+                                <li><a href="#">Gift Card</a></li>
+                                <li><a href="#">Gifting Process</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">Kids</a>
+                    <div class="main-header-dropdown">
+                        <div>
+                            <h5>Shop By Product</h5>
+                            <ul>
+                                <li><a href="#">T-Shirts</a></li>
+                                <li><a href="#">Pants</a></li>
+                                <li><a href="#">Long Sleeves</a></li>
+                                <li><a href="#">Jackets</a></li>
+                                <li><a href="#">Jeans</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5>Gifting</h5>
+                            <ul>
+                                <li><a href="#">Gift Card</a></li>
+                                <li><a href="#">Gifting Process</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">H&M HOME</a>
+                    <div class="main-header-dropdown">
+                        <div>
+                            <h5>Trending</h5>
+                            <ul>
+                                <li><a href="#">Spring Clothes</a></li>
+                                <li><a href="#">Y2K Fashion</a></li>
+                                <li><a href="#">Comfy Fashion</a></li>
+                                <li><a href="#">Bright Colours</a></li>
+                                <li><a href="#">Festival Clothing</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5>Shop By Product</h5>
+                            <ul>
+                                <li><a href="#">View All Tops</a></li>
+                                <li><a href="#">View All Bottoms</a></li>
+                                <li><a href="#">View All Jackets</a></li>
+                                <li><a href="#">View All Dresses</a></li>
+                                <li><a href="#">View All Accessories</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5>Gifting</h5>
+                            <ul>
+                                <li><a href="#">Gift Card</a></li>
+                                <li><a href="#">Gifting Process</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">Sale</a>
+                    <div class="main-header-dropdown">
+                        <div>
+                            <h5>Trending</h5>
+                            <ul>
+                                <li><a href="#">Spring Clothes</a></li>
+                                <li><a href="#">Y2K Fashion</a></li>
+                                <li><a href="#">Comfy Fashion</a></li>
+                                <li><a href="#">Bright Colours</a></li>
+                                <li><a href="#">Festival Clothing</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5>Shop By Product</h5>
+                            <ul>
+                                <li><a href="#">View All Tops</a></li>
+                                <li><a href="#">View All Bottoms</a></li>
+                                <li><a href="#">View All Jackets</a></li>
+                                <li><a href="#">View All Dresses</a></li>
+                                <li><a href="#">View All Accessories</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5>Gifting</h5>
+                            <ul>
+                                <li><a href="#">Gift Card</a></li>
+                                <li><a href="#">Gifting Process</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">Sustainability</a>
+                    <div class="main-header-dropdown sustainability">
+                        <div>
+                            <h5>Our Work</h5>
+                            <ul>
+                                <li><a href="#">Change</a></li>
+                                <li><a href="#">Innovate</a></li>
+                                <li><a href="#">Be Fair</a></li>
+                                <li><a href="#">Be Transparent</a></li>
+                                <li><a href="#">The Latest</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search products">
+            </div>
+        </nav>
+    </header>
+
+    <!-- contains bread crumbs nav -->
+    <div class="bread-crumbs">
+        <a href="#">HM.com</a>
+        <p>/</p>
+        <a href="#">Men</a>
+        <p>/</p>
+        <a href="#">Hoodies & Sweatshirts</a>
+        <p>/</p>
+        <a href="#">Hoodies</a>
+        <p>/</p>
+        <a href="#">Relaxed-fit Hoodie</a>
+    </div>
+
+    <!-- main contains the product information -->
+    <main>
+        <section class="product-section">
+            <div class="model-container">
+                <div class="product-container">
+                    <div class="image-container1"></div>
+                    <div class="image-container2"></div>
+                </div>
+                <section>
+                    <div class="essentials">
+                        <h6>ESSENTIALS</h6>
+                        <p>H&M Essentials. No. 3: The Hoodie. Relaxed-fit sweatshirt hoodie in cotton-blend fabric with
+                            soft, brushed inside. Jersey-lined drawstring hood, kangaroo pocket, and long sleeves. Wide
+                            ribbing at cuffs and hem.</p>
+                    </div>
+                    <div class="sizing-container">
+                        <div>
+                            <h6>Size</h6>
+                            <span></span>
+                            <p>The model is 188cm/6'2" and wears a size M</p>
+                        </div>
+                        <div>
+                            <h6>Fit</h6>
+                            <span></span>
+                            <p>Relaxed fit</p>
+                        </div>
+                        <div>
+                            <h6>Composition</h6>
+                            <span></span>
+                            <p>Hood lining: Cotton 59%, Polyester 41%. Shell: Cotton 60%, Polyester 40%</p>
+                        </div>
+                        <div>
+                            <h6>Art.No.</h6>
+                            <span></span>
+                            <p>0970919015</p>
+                        </div>
+                        <div>
+                            <p>True to size</p>
+                            <span></span>
+                            <div class="circle"></div>
+                            <div class="scale-container">
+                                <p>Runs Small</p>
+                                <p>True to Size</p>
+                                <p>Runs Large</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- aside contains the add to cart/sizing -->
+            <aside>
+                <div>
+                    <div id="icon-container">
+                        <h3>Relaxed-fit Hoodie</h3>
+                        <a href="#"><i class="fa-solid fa-heart"></i></a>
+                    </div>
+
+                    <h4>$29.99</h4>
+                    <h5>Light Pink</h5>
+                </div>
+
+                <div class="hoodie-container">
+                    <img src="./img/hoodie-black.png" alt="Relaxed fit hoodie" />
+                    <img src="./img/hoodie-pink.png" id="selected" alt="Relaxed fit hoodie" />
+                    <img src="./img/hoodie-white.png" alt="Relaxed fit hoodie" />
+                    <img src="./img/hoodie-blue.png" alt="Relaxed fit hoodie" />
+                </div>
+                <div>
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                </div>
+
+                <div>
+                    <a href="#"><i class="fa-solid fa-shop"></i></a>
+                    <a href="#">Check in-store availability</a>
+                </div>
+
+                <div>
+                    <a href="#" title="Leave A Review Here">Reviews(1732)</a>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+
+                <form>
+                    <select>
+                        <option>Select Size</option>
+                        <option>Small</option>
+                        <option>Medium</option>
+                        <option>Large</option>
+                    </select>
+                    <div>
+                        <a href="#"><i class="fa-solid fa-bag-shopping"></i> Add to Bag</a>
+                    </div>
+                </form>
+            </aside>
+        </section>
+
+        <!-- contains a bar of links that will stick to the bottom of the page until scrolled passed -->
+        <div class="sticky-bar">
+            <div>
+                <a href="#">DETAILS</a>
+                <a href="#">DELIVERY AND PAYMENT</a>
+                <a href="#">PRODUCT BACKGROUND</a>
+            </div>
+            <div>
+                <p>Members get free online returns.</p>
+            </div>
+        </div>
+
+        <!-- contains the other products images/info -->
+        <section class="other-products-container">
+            <div>
+                <h3>Style With</h3>
+            </div>
+            <div class="prod-container">
+                <figure>
+                    <div class="other-products-image image1">
+                        <a href="#"><i class="fa-solid fa-heart"></i></a>
+                    </div>
+                    <figcaption id="mobileOther">
+                        <p>Canvas High Tops</p>
+                        <p>$34.99</p>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <div class="other-products-image image2">
+                        <a href="#"><i class="fa-solid fa-heart"></i></a>
+                    </div>
+                    <figcaption>
+                        <p>Skinny Jeans</p>
+                        <p>$49.99</p>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <div class="other-products-image image3">
+                        <a href="#"><i class="fa-solid fa-heart"></i></a>
+                    </div>
+                    <figcaption>
+                        <p>Hybrid Regular Tapered Joggers</p>
+                        <p>$49.99</p>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <div class="other-products-image image4">
+                        <a href="#"><i class="fa-solid fa-heart"></i></a>
+                    </div>
+                    <figcaption>
+                        <p>Small Shoulder Bag</p>
+                        <p>$14.99</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- contains the popup form -->
+        <div class="pop-up-form">
+            <div>
+                <h2>Sign Up To Newsletter</h2>
+                <i class="fa-solid fa-x"></i>
+            </div>
+            <p>Stay up to date with all the new products and future sales.</p>
+            <form action="some-file.php" method="post">
+                <label for="name">First Name:</label>
+                <div>
+                    <input type="text" name="name" id="name" placeholder="John Smith">
+                </div>
+                <label for="email">Email:</label>
+                <div>
+                    <input type="text" name="email" id="email" placeholder="john.smith@email.ca">
+                </div>
+                <div>
+                    <button>Submit</button>
+                </div>
+            </form>
+        </div>
+        <div class="display-form">
+            <button id="showBtn">Newsletter Form</button>
+        </div>
+    </main>
+
+    <!-- contains the footer nav and logo -->
+    <footer>
+        <div class="top-half-footer">
+            <ul>
+                <li id="firstItem"><a href="#">SHOP</a></li>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">Divided</a></li>
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Baby</a></li>
+                <li><a href="#">Kids</a></li>
+                <li><a href="#">H&M HOME</a></li>
+            </ul>
+            <ul>
+                <li id="firstItem"><a href="#">CORPORATE INFO</a></li>
+                <li><a href="#">Carrer at H&M</a></li>
+                <li><a href="#">About H&M Group</a></li>
+                <li><a href="#">Sustainability</a></li>
+                <li><a href="#">Press</a></li>
+                <li><a href="#">Investor Relations</a></li>
+            </ul>
+            <ul>
+                <li id="firstItem"><a href="#">HELP</a></li>
+                <li><a href="#">Customer Service</a></li>
+                <li><a href="#">My Account</a></li>
+                <li><a href="#">Store Locator</a></li>
+                <li><a href="#">Legal & Privacy</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Gift Cards</a></li>
+                <li><a href="#">Cookies Settings</a></li>
+            </ul>
+            <div>
+                <p>Become a Member</p>
+                <p>Join now and get 10% off your second purchase, and free returns on all online purchases!</p>
+                <a href="#">READ MORE</a>
+                <i class="fa-solid fa-arrow-right-long"></i>
+            </div>
+        </div>
+        <div class="bottom-half-footer">
+            <div class="social-container">
+                <a href="#"><img src="img/facebook.svg" alt="facebook" title="Facebook" /></a>
+                <a href="#"><img src="img/twitter.svg" alt="twitter" title="Twitter" /></a>
+                <a href="#"><img src="img/instagram.svg" alt="instagram" title="Instagram" /></a>
+                <a href="#"><img src="img/youtube.svg" alt="youtube" title="YouTube" /></a>
+                <a href="#"><img src="img/pintrest.svg" alt="pintrest" title="Pintrest" /></a>
+            </div>
+            <div>
+                <p>The content of this site is copyright-protected and is the property of H & M Hennes & Mauritz AB.
+                    H&M's business concept is to offer fashion and quality at the best price in a...</p>
+            </div>
+            <div>
+                <a href="#">READ MORE</a>
+            </div>
+            <div>
+                <p>Hennes</p>
+                <a href="index.html"><img src="img/logo-alt.png" alt="Home page" title="H&M Home" /></a>
+                <p>Mauritz</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
